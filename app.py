@@ -9,14 +9,8 @@ def database(y):
     genre = item["genres"]
     description = item["extract"]
     user_input = input("Here is our list of movies! Please enter one of the following variables and we will search for it: genres, title, or year")
-    if user_input is not "genres":
-        print("Invalid Input")
-        return
     if user_input == "genres":
         user_input = input("What genre are you looking for?")
-        if genre is not user_input:
-            print("Invalid Input")
-            return
         if genre == [user_input]:
             print(item["title"])
     if user_input == "year":
